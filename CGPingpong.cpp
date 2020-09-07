@@ -214,6 +214,7 @@ public:
     }
 };
 void desenhar() {
+    Sleep(5);
     Jogador::desenharP1();
     Jogador::desenharP2();
     glBegin(GL_LINES);
@@ -268,22 +269,22 @@ void keyboard()
 
     if (GetAsyncKeyState('W') != 0) {
         if (pontayPkb < 200) {
-            pontayPkb += 0.1;
+            pontayPkb += 2;
         }
     }
     if (GetAsyncKeyState('A') != 0) {
         if (pontaxPkb > -300) {
-            pontaxPkb -= 0.1;
+            pontaxPkb -= 2;
         }
     }
     if (GetAsyncKeyState('S') != 0) {
         if (pontayPkb > -200) {
-            pontayPkb -= 0.1;
+            pontayPkb -= 2;
         }
     }
     if (GetAsyncKeyState('D') != 0) {
         if (pontaxPkb < -20) {
-            pontaxPkb += 0.1;
+            pontaxPkb += 2;
         }
     }
     glutPostRedisplay();
